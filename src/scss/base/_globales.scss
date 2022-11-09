@@ -1,0 +1,57 @@
+@use 'variables' as v; //   Solo Varuables porque esta dentro de la carpeta base
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*-- 1re igual 10 px, --para trabajar en rem. */ 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1,6rem;   
+    
+    }
+
+p {
+    margin: 0;
+    color: v.$grisClaro;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contenedor {    // para agregar en los bloques o elemento principales
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    color: v.$grisClaro;
+    font-size: 1.7rem;
+  
+}
+
+img {
+    display: block;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: v.$gris;
+   
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: v.$gris;
+    padding: 2rem 0 2rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+

@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.accses {
+    padding:2rem 8rem 2rem 8rem;
+
+    &__flexx {
+        @include m.flex(flex, column, center, center);
+    }
+
+    &__h2 {
+
+      @include m.telefono {
+          font-size: 4rem;
+      }
+  }
+
+    &__foto {
+        width: 100%;
+       margin: 0 auto;
+        padding: 6rem 0rem 0rem 0;
+
+        @include m.telefono {
+          width: 80%;
+        }
+  }
+
+  &__h3 {
+   
+    @include m.telefono {
+        padding: 0 0 0.5rem 0 ;
+        font-size: 2.5rem;
+      }
+   }
+
+   &__parrafo { 
+    @include m.telefono {
+        padding-top: 2rem;
+       
+    }
+  
+  }
+
+  &__gridd {
+    @include m.flex(flex, column, center, center);
+
+    @include m.telefono { 
+    @include m.grid(3, 2rem);
+    padding-top: 4rem;
+   }
+  }
+
+  &__gridd-foto {
+     margin: 0 auto;
+    padding: 3rem 0rem;
+  }
+} 

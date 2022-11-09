@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.empresas {
+    padding:2rem 8rem 2rem 8rem;
+    margin: 10rem 0 10rem 0;
+    
+    &__gridddd {
+        @include m.grid(1, 8rem);
+
+        @include m.telefono {
+          @include m.flex(flex, row, center, center);
+          gap: 4rem;
+     }
+    }
+
+    &__img {
+        margin: 0 auto;
+     
+    }
+    
+}

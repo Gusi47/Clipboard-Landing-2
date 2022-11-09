@@ -1,0 +1,65 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    padding: 0 2rem 0 2rem;
+    background-image: url(../img/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    @include m.flex(flex, column, space-evenly, center);
+
+    @include m.telefono {
+       background-image: url(../img/bg-header-desktop.png);
+       background-repeat: no-repeat;
+    }
+
+    &__logo {
+        padding: 10rem 0 5rem 0;
+        width: 11rem;
+    }
+
+    &__h1 {
+        font-size: 4rem;
+        text-align: center;
+        color: v.$gris;
+    }
+
+    &__texto {
+        text-align: center;
+        @include m.telefono {
+            width: 50%;
+        }
+     }
+
+    &__enlaces {
+        @include m.flex(flex, column, space-evenly, center);
+        padding-top: 3rem;
+
+        @include m.telefono {
+            @include m.flex(flex, row, space-evenly, center);
+            gap: 2rem;
+            width: 40%;
+            
+         }
+    }
+
+    &__link1 {
+        @include m.boton(v.$verde, v.$blanco);
+        font-size: 1.4rem;
+        width: 155%;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__link2 {
+        @include m.boton(v.$lila, v.$blanco);
+        font-size: 1.4rem;
+        width: 155%;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
